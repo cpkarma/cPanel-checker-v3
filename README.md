@@ -1,6 +1,10 @@
-# cPanel-checker-v3
+# cPanel Checker v3
 
 A powerful and efficient Mass cPanel checker tool for bulk validation. This software allows users to input multiple cPanel credentials, process them accurately, and retrieve valid results seamlessly.
+
+**Download Link:**
+
+https://drive.google.com/file/d/1gz3ybihKzIRN1FMceCYkOYuQF5ELfggg/view?usp=sharing
 
 **Features:**
 
@@ -11,6 +15,5 @@ A powerful and efficient Mass cPanel checker tool for bulk validation. This soft
 * **Valid Results Display:** View successful logins instantly with the "Show valid results" button.
 
 🚀 Designed for efficiency and reliability!
-
 
 ![Alt text](https://raw.githubusercontent.com/cpkarma/img/main/cpv3.jpg)
