@@ -1,5 +1,4 @@
 <?php
-// ANSI color codes for terminal output
 define('GREEN', "\033[32m");
 define('RED', "\033[31m");
 define('YELLOW', "\033[33m");
@@ -8,15 +7,12 @@ define('RESET', "\033[0m");
 
 echo GREEN . "\nAccurate cPanel Checker V3\n" . RESET . "\n";
 
-// API endpoint (update this to your actual API URL)
 $apiUrl = 'https://cpkarma.cc/cpv3/api.php';
 
-// Prompt for input and output files
 $inputFile = trim(readline("Enter the input file (e.g., list.txt): "));
 $outputFile = trim(readline("Enter the output file for working cPanels (e.g., working.txt): "));
 echo "\n";
 
-// Check if input file exists
 if (!file_exists($inputFile) || !is_readable($inputFile)) {
     die(RED . "Error: $inputFile not found or unreadable.\n" . RESET);
 }
@@ -26,7 +22,6 @@ if (!$handle) {
     die(RED . "Error: Could not open $inputFile.\n" . RESET);
 }
 
-// Function to send POST request to API
 function checkCpanel($cpv3, $apiUrl) {
     $ch = curl_init();
     
@@ -50,7 +45,6 @@ function checkCpanel($cpv3, $apiUrl) {
     return json_decode($response, true);
 }
 
-// Process each line
 $total = 0;
 $working = 0;
 
@@ -60,7 +54,6 @@ while (!feof($handle)) {
     
     $total++;
     
-    // Send request to API
     $result = checkCpanel($line, $apiUrl);
     
     if ($result === null || !isset($result['status'])) {
@@ -68,7 +61,6 @@ while (!feof($handle)) {
         continue;
     }
     
-    // Display result
     switch ($result['status']) {
         case 'working':
             echo "$line > " . GREEN . "Working\n" . RESET;
@@ -83,13 +75,11 @@ while (!feof($handle)) {
             break;
     }
     
-    // Add a delay to avoid overwhelming the API
-    sleep(1); // 1 second delay between requests
+    sleep(1);
 }
 
 fclose($handle);
 
-// Summary
 echo "\n" . CYAN . "Summary:\n" . RESET;
 echo "Total checked: $total\n";
 echo "Working: $working\n";
