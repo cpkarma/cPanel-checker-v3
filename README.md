@@ -1,19 +1,18 @@
-# cPanel Checker v3
+# Mass cPanel Checker v3
 
-A powerful and efficient Mass cPanel checker tool for bulk validation. This software allows users to input multiple cPanel credentials, process them accurately, and retrieve valid results seamlessly.
+This is a simple PHP-based API that checks the validity of cPanel login credentials by attempting to log in and analyzing the response. When valid credentials are found, they are saved to a `found.txt` file.
 
-**Download Link:**
+## Features
+- Validates cPanel credentials in the format `https://domain.com:2083|username|password`.
+- Returns JSON responses with status and debug information.
+- Saves working credentials to `v3_*.txt`.
+- Handles CORS for cross-origin requests.
 
-https://drive.google.com/file/d/1gz3ybihKzIRN1FMceCYkOYuQF5ELfggg/view?usp=sharing
+## Requirements
+- PHP 7.x or 8.x with cURL extension enabled.
+- Write permissions for the directory containing `v3_*.txt`.
 
-**Features:**
-
-* **Bulk Input:** Enter multiple cPanel credentials in the text area.
-* **Real-time Processing:** Check cPanel access with high accuracy.
-* **Session Logging:** Automatically saves results to a newly generated text file.
-* **Stop Functionality:** Allows users to halt the process anytime.
-* **Valid Results Display:** View successful logins instantly with the "Show valid results" button.
-
-🚀 Designed for efficiency and reliability!
-
-![Alt text](https://raw.githubusercontent.com/cpkarma/img/main/cpv3.jpg)
+## Installation
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/yourusername/cpanel-checker-api.git
