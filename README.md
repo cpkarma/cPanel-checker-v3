@@ -1,6 +1,6 @@
 # Mass cPanel Checker v3
 
-This is a simple PHP-based API that checks the validity of cPanel login credentials by attempting to log in and analyzing the response. When valid credentials are found, they are saved to a `found.txt` file.
+This is a simple PHP-based API that checks the validity of cPanel login credentials by attempting to log in and analyzing the response. When valid credentials are found, they are saved to a `v3_*.txt` file.
 
 ## Features
 - Validates cPanel credentials in the format `https://domain.com:2083|username|password`.
