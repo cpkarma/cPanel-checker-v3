@@ -9,7 +9,7 @@ define('RESET', "\033[0m");
 echo GREEN . "\nAccurate cPanel Checker V3\n" . RESET . "\n";
 
 // API endpoint (update this to your actual API URL)
-$apiUrl = 'http://cpkarma.cc/v3api/api.php';
+$apiUrl = 'https://cpkarma.cc/cpv3/api.php';
 
 // Prompt for input and output files
 $inputFile = trim(readline("Enter the input file (e.g., list.txt): "));
@@ -79,7 +79,7 @@ while (!feof($handle)) {
             echo "$line > " . RED . "Not Working\n" . RESET;
             break;
         case 'error':
-            echo "$line > " . YELLOW . "Error: " . ($result['error'] ?? 'Unknown') . "\n" . RESET;
+            echo "$line > " . YELLOW . "Error" . "\n" . RESET;
             break;
     }
     
