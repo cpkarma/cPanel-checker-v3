@@ -16,3 +16,9 @@ This is a simple PHP-based API that checks the validity of cPanel login credenti
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/yourusername/cpanel-checker-api.git
+
+## Web Interface
+![Alt text](https://raw.githubusercontent.com/cpkarma/img/main/v3_1.jpg)
+
+## PHP Cli (Terminal)
+![Alt text](https://raw.githubusercontent.com/cpkarma/img/main/v3_2.jpg)
